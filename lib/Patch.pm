@@ -99,7 +99,7 @@ sub cleanupDiff {
 }
 
 sub detectScm {
-    return "CCTools";
+    return "SVN";
 }
 
 sub applyPatch {
