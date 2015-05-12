@@ -6,6 +6,7 @@ This is to build a robust adapter for source code management systems like CVS, c
 Dependency
 ===========
 patchutils-0.3.2 - This has to be installed and commands need to be available to use by ScmAdapater
+patch - Unix command which is used for applying patches.
 
 Other software use with ScmAdapater
 ===================================
