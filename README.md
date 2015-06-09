@@ -13,6 +13,10 @@ Other software use with ScmAdapater
 1. CodeMirror - use this for making your files editable online and collaborate easily.
 2. Mergely - use this to produce a nice side-by-side view by using output files from ScmAdapter.
 
+More useful information
+=======================
+http://madhavabk.github.io/scmadapter/
+
 CONTACT DETAILS
 =================
 madhavabk@gmail.com
