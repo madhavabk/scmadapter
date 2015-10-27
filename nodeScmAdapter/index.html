@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/bootstrap-select.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="common.js"></script>
+<script src="../../protected-cgi-bin/common-css-js/jquery-ui.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link type='text/css' rel='stylesheet' href='../editor/lib/tipsy/tipsy.css' />
+            <script type="text/javascript" src="../editor/lib/tipsy/jquery.tipsy.js"></script>
+<script language="javascript">
+    function scmOpts(scmType) {
+        if( scmType == "SVN (subversion)" ) {
+            $("#userid").show();
+            $("#password").show();
+        }
+}
+</script>
+</head>
+<body>
+<div id="page-wrapper" style="min-height: 276px;">
+            <div class="row">
+                <div class="col-lg-12">
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Create side-by-side for review through diff upload(ScmAdapter)
+                            <h1> Curtosy: </h1><a href="https://github.com/madhavabk/scmadapter">ScmAdapter</a>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6"/>
+                                    <form action="/file-upload" method="post" enctype="multipart/form-data">
+                                            <input name="revid" type="text" class="form-control" placeholder="Enter reviewid here...">
+                                            <input name="user" type="text" class="form-control" placeholder="Enter CEC userid">
+                                            <input name="pwd" class="form-control" type="password">
+                                            <select name="scmtype" class="form-control" >
+                                                <option id="none">Select Version Control</option>
+                                                <option id="svn">Subversion</option>
+                                                <option id="git">Git</option>
+                                                <option id="ACME">ACME</option>
+                                                <option id="CCTools">CCTools</option>
+                                            </select>
+                                            <input name="repo" class="form-control" type="text" placeholder="The SVN URL">
+                                            <input type="file" name="patch">
+                                        <button id="1" original-title="Test Button" onClick="submit()" class="btn btn-default">Submit Button</button>
+                                        <button type="reset" class="btn btn-default">Reset Button</button>
+                                    </form>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <script>
+$('#1').tipsy({title: function() { return this.getAttribute('original-title').toUpperCase(); }});
+            </script>
+</body>
+</html>
